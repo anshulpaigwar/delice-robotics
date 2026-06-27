@@ -313,6 +313,8 @@ body.nav-open{overflow:hidden}
   .spec-list-cols{grid-template-columns:1fr}
   .partners{grid-template-columns:1fr}
   .navlinks a:not(.btn){display:none}
+  .hero-video{inset:0;left:0;right:0;width:100%;min-width:100%;object-position:center center}
+  .hero-scrim{background:linear-gradient(180deg,var(--cream) 0%,rgba(251,248,241,.92) 34%,rgba(251,248,241,.55) 56%,rgba(251,248,241,.18) 78%,transparent 100%)}
   .cta-band{padding:72px 0 max(72px,env(safe-area-inset-bottom))}
   .deck-cover{min-height:280px}
 }
@@ -331,7 +333,7 @@ body.nav-open{overflow:hidden}
   .section-head{margin-bottom:32px}
   .section-head h2{font-size:clamp(1.75rem,8vw,2.4rem)}
   .hero{min-height:100svh;padding:max(108px,calc(72px + env(safe-area-inset-top))) 0 64px}
-  .hero-video{left:0;min-width:100%;object-position:72% center}
+  .hero-video{inset:0;left:0;right:0;width:100%;min-width:100%;object-position:center center}
   .hero-scrim{background:linear-gradient(180deg,var(--cream) 0%,rgba(251,248,241,.94) 38%,rgba(251,248,241,.5) 58%,rgba(251,248,241,.15) 100%)}
   .hero .wrap{max-width:none;margin-left:0;padding:0}
   .hero h1{font-size:clamp(2.2rem,11vw,3.2rem)}
@@ -391,10 +393,10 @@ body.nav-open{overflow:hidden}
   <div class="navbackdrop" id="navbackdrop" hidden></div>
   <nav class="navlinks" id="navlinks">
     <a href="#specs">Specs</a>
-    <a href="#usecases">Use cases</a>
     <a href="#videos">Videos</a>
-    <a href="#gallery">Gallery</a>
+    <a href="#usecases">Use cases</a>
     <a href="#deck">Pitch deck</a>
+    <a href="#gallery">Gallery</a>
     <a href="#team">Team</a>
     <a href="#contact" class="btn btn-primary">Get in touch</a>
   </nav>
@@ -481,6 +483,21 @@ body.nav-open{overflow:hidden}
   </div>
 </section>
 
+<!-- ================= VIDEOS ================= -->
+<!-- Link YouTube: set data-yt="VIDEO_ID" (part after watch?v=). Thumbnail auto-loads; video loads on click. -->
+<section class="band dark" id="videos">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="eyebrow">Watch</div><h2>RoboDélice on video.</h2></div>
+  </div>
+  <div class="videos-shell">
+    <div class="videos">
+      <div class="vcard reveal" data-yt="_btLZUSxiDQ"><div class="thumb"></div><span class="play-btn lg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><div class="vtitle">Cooking demo</div></div>
+      <div class="vcard reveal" data-yt="UFoQkZEWzhU"><div class="thumb"></div><span class="play-btn lg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><div class="vtitle">Inside the kiosk</div></div>
+      <div class="vcard reveal" data-yt="7fWT3WD2Ccs"><div class="thumb"></div><span class="play-btn lg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><div class="vtitle">The robot in action</div></div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= USE CASES / LOCATIONS ================= -->
 <section class="band tint" id="usecases">
   <div class="wrap">
@@ -499,54 +516,6 @@ body.nav-open{overflow:hidden}
       <div class="uc" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--berry),var(--coral))">
         <div style="position:relative;z-index:2;text-align:center"><h4 style="margin:0">Have a location in mind?</h4><a href="#contact" class="btn btn-ghost" style="margin-top:14px;border-color:rgba(255,255,255,.7);color:#fff">Talk to us</a></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= VIDEOS ================= -->
-<!-- Link YouTube: set data-yt="VIDEO_ID" (part after watch?v=). Thumbnail auto-loads; video loads on click. -->
-<section class="band dark" id="videos">
-  <div class="wrap">
-    <div class="section-head reveal"><div class="eyebrow">Watch</div><h2>RoboDélice on video.</h2></div>
-  </div>
-  <div class="videos-shell">
-    <div class="videos">
-      <div class="vcard reveal" data-yt="_btLZUSxiDQ"><div class="thumb"></div><span class="play-btn lg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><div class="vtitle">Cooking demo</div></div>
-      <div class="vcard reveal" data-yt="UFoQkZEWzhU"><div class="thumb"></div><span class="play-btn lg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><div class="vtitle">Inside the kiosk</div></div>
-      <div class="vcard reveal" data-yt="7fWT3WD2Ccs"><div class="thumb"></div><span class="play-btn lg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><div class="vtitle">The robot in action</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= GALLERY — photos & videos from assets/images/gallery/ ================= -->
-<section class="band light" id="gallery">
-  <div class="wrap">
-    <div class="section-head reveal"><div class="eyebrow">Gallery</div><h2>RoboDélice in the making.</h2><p>Photos and videos from development and deployments — click any item to view it larger.</p></div>
-  </div>
-  <div class="gallery-wrap reveal">
-    <button class="gnav prev" aria-label="Scroll left"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
-    <button class="gnav next" aria-label="Scroll right"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
-    <div class="gallery" id="galStrip">
-      <div class="thumb-item" data-img="assets/images/gallery/IMG_20201208_184815.jpg"></div>
-      <div class="thumb-item is-video" data-video="assets/images/gallery/VID_20201216_162357.mp4" data-cap="Video"></div>
-      <div class="thumb-item" data-img="assets/images/gallery/IMG_20201217_140229.jpg"></div>
-      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210202_160401021.jpg"></div>
-      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210202_160605435.jpg"></div>
-      <div class="thumb-item" data-img="assets/images/gallery/IMG_20210212_180130.jpg"></div>
-      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210225_163656185.jpg"></div>
-      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210619_092000757.jpg"></div>
-      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210629_154217737.jpg"></div>
-      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210709_074742957.jpg"></div>
-      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210726_165644579.jpg"></div>
-      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210820_161020292.jpg"></div>
-      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210826_160120084.jpg"></div>
-      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210827_135516313.jpg"></div>
-      <div class="thumb-item is-video" data-video="assets/images/gallery/PXL_20211129_141533731.mp4" data-cap="Video"></div>
-      <div class="thumb-item" data-img="assets/images/gallery/IMG_20220705_101916.jpg"></div>
-      <div class="thumb-item" data-img="assets/images/gallery/PXL_20220705_081931167.jpg"></div>
-      <div class="thumb-item" data-img="assets/images/gallery/received_511997173330035.webp"></div>
-      <div class="thumb-item is-video" data-video="assets/images/gallery/Robochef_simulation_fast.mp4" data-cap="Simulation"></div>
-      <div class="thumb-item is-video" data-video="assets/images/gallery/Robochef_gazebo_1_c.mp4" data-cap="Gazebo sim"></div>
     </div>
   </div>
 </section>
@@ -584,6 +553,39 @@ body.nav-open{overflow:hidden}
           <iframe src="YOUR_GOOGLE_SLIDES_OR_PDF_URL" style="width:100%;height:100%;border:0" allowfullscreen></iframe>
         </div> -->
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY — photos & videos from assets/images/gallery/ ================= -->
+<section class="band light" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="eyebrow">Gallery</div><h2>RoboDélice in the making.</h2><p>Photos and videos from development and deployments — click any item to view it larger.</p></div>
+  </div>
+  <div class="gallery-wrap reveal">
+    <button class="gnav prev" aria-label="Scroll left"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <button class="gnav next" aria-label="Scroll right"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
+    <div class="gallery" id="galStrip">
+      <div class="thumb-item" data-img="assets/images/gallery/IMG_20201208_184815.jpg"></div>
+      <div class="thumb-item is-video" data-video="assets/images/gallery/VID_20201216_162357.mp4" data-cap="Video"></div>
+      <div class="thumb-item" data-img="assets/images/gallery/IMG_20201217_140229.jpg"></div>
+      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210202_160401021.jpg"></div>
+      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210202_160605435.jpg"></div>
+      <div class="thumb-item" data-img="assets/images/gallery/IMG_20210212_180130.jpg"></div>
+      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210225_163656185.jpg"></div>
+      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210619_092000757.jpg"></div>
+      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210629_154217737.jpg"></div>
+      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210709_074742957.jpg"></div>
+      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210726_165644579.jpg"></div>
+      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210820_161020292.jpg"></div>
+      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210826_160120084.jpg"></div>
+      <div class="thumb-item" data-img="assets/images/gallery/PXL_20210827_135516313.jpg"></div>
+      <div class="thumb-item is-video" data-video="assets/images/gallery/PXL_20211129_141533731.mp4" data-cap="Video"></div>
+      <div class="thumb-item" data-img="assets/images/gallery/IMG_20220705_101916.jpg"></div>
+      <div class="thumb-item" data-img="assets/images/gallery/PXL_20220705_081931167.jpg"></div>
+      <div class="thumb-item" data-img="assets/images/gallery/received_511997173330035.webp"></div>
+      <div class="thumb-item is-video" data-video="assets/images/gallery/Robochef_simulation_fast.mp4" data-cap="Simulation"></div>
+      <div class="thumb-item is-video" data-video="assets/images/gallery/Robochef_gazebo_1_c.mp4" data-cap="Gazebo sim"></div>
     </div>
   </div>
 </section>
