@@ -22,7 +22,7 @@ from CDN). The hero plays a looping background video.
 - **Hero video** → `assets/video/hero.mp4` (short, muted, looping; ~3-8 MB).
   Add `assets/images/hero-poster.jpg` as the still shown first.
   GIF alternative: see `assets/video/README.txt`.
-- **Pitch deck** → `assets/deck/Delice-Pitch-Deck.pdf` (buttons already point to it).
+- **Pitch deck** → `assets/deck/Delice_robotics_pitch.pdf` (buttons already point to it).
   To embed slides, uncomment the iframe in the Pitch deck section.
 - **Photos** → `assets/images/` (see that folder's README for exact filenames).
 - **Gallery** → set each thumbnail's `data-img` and `.ph` background to a photo path.
